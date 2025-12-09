@@ -27,11 +27,9 @@ import ua.polodarb.gms.impl.DatabaseNotFoundException
 import ua.polodarb.gms.init.InitRootDB
 import ua.polodarb.gmsflags.GMSApplication
 import ua.polodarb.gmsflags.core.platform.activity.BaseActivity
-import ua.polodarb.gmsflags.core.updates.UpdateDialog
 import ua.polodarb.gmsflags.errors.gms.stateCheck.GmsCrashesDetectWorker
 import ua.polodarb.gmsflags.navigation.RootAppNavigation
 import ua.polodarb.gmsflags.ui.theme.GMSFlagsTheme
-import ua.polodarb.network.impl.appUpdates.AppUpdatesApiServiceImpl
 import ua.polodarb.platform.init.InitShell
 import ua.polodarb.preferences.datastore.DatastoreManager
 import ua.polodarb.updates.dialogs.SyncTime
@@ -46,7 +44,6 @@ class MainActivity : BaseActivity() {
 
     val rootDBInitializer: InitRootDB by inject()
     private val datastoreManager: DatastoreManager by inject()
-    private val githubApiService by inject<AppUpdatesApiServiceImpl>()
 
     private val configuredFile = File(appContext.filesDir, "configured")
 
@@ -100,10 +97,6 @@ class MainActivity : BaseActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    UpdateDialog(
-                        appUpdatesApiService = githubApiService,
-                        isFirstStart = isFirstStart
-                    )
                     RootAppNavigation(
                         navController = rememberNavController(),
                         isFirstStart = isFirstStart,

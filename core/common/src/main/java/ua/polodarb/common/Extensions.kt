@@ -61,11 +61,6 @@ object Extensions {
         }
     }
 
-    fun String.toFormattedInt(): Int {
-        val digits = this.filter { it.isDigit() }
-        return digits.toIntOrNull() ?: 0
-    }
-
     fun Map<String, String>.toSortMap(): SortedMap<String, String> {
         return this.toSortedMap(
             compareByDescending<String> {
