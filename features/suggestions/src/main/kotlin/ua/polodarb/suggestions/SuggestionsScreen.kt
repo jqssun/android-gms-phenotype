@@ -218,9 +218,9 @@ fun SuggestionsScreen(
                                 note = item.flag.note,
                                 warning = item.flag.warning,
                                 source = item.flag.source,
-                                appInfoPackageName = item.flag.appPackage,
+                                appInfoPackageName = item.flag.packageId,
                                 flagValue = item.enabled,
-                                flagDetails = item.flag.detailsLink,
+                                flagDetails = item.flag.url,
                                 listStart = isFirstInGroup,
                                 listEnd = isLastInGroup,
                                 flagOnCheckedChange = { bool ->
@@ -228,7 +228,7 @@ fun SuggestionsScreen(
                                         SpecialFlags.CALL_SCREEN.name -> {
                                             viewModel.callScreenDialogData = CallScreenDialogData(
                                                 flags = item.flag.flags,
-                                                callScreenPackage = item.flag.flagPackage
+                                                callScreenPackage = item.flag.packageName
                                             )
                                             callScreenIndex = data.indexOf(item)
                                             callScreenNewValue = bool
@@ -238,7 +238,7 @@ fun SuggestionsScreen(
                                                 viewModel.updateFlagValue(false, callScreenIndex)
                                                 viewModel.overrideSuggestedFlags(
                                                     flags = item.flag.flags,
-                                                    packageName = item.flag.flagPackage,
+                                                    packageName = item.flag.packageName,
                                                     newBoolValue = callScreenNewValue
                                                 )
                                                 Toast.makeText(context, "Please wait 10 seconds", Toast.LENGTH_SHORT).show()
@@ -248,7 +248,7 @@ fun SuggestionsScreen(
                                         else -> {
                                             viewModel.overrideSuggestedFlags(
                                                 flags = item.flag.flags,
-                                                packageName = item.flag.flagPackage,
+                                                packageName = item.flag.packageName,
                                                 newBoolValue = bool
                                             )
                                             viewModel.updateFlagValue(bool, data.indexOf(item))
@@ -257,7 +257,7 @@ fun SuggestionsScreen(
                                 },
                                 onOpenAppClick = {
                                     val intent =
-                                        packageManager.getLaunchIntentForPackage(item.flag.appPackage)
+                                        packageManager.getLaunchIntentForPackage(item.flag.packageId)
                                     if (intent != null) {
                                         context.startActivity(intent)
                                     } else {
@@ -272,7 +272,7 @@ fun SuggestionsScreen(
                                 onOpenSettingsClick = {
                                     val intent = Intent(
                                         Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                                        Uri.fromParts("package", item.flag.appPackage, null)
+                                        Uri.fromParts("package", item.flag.packageId, null)
                                     )
                                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                     startActivity(context, intent, null)
@@ -281,7 +281,7 @@ fun SuggestionsScreen(
                                 onViewDetailsClick = {
                                     val intent = Intent(
                                         Intent.ACTION_VIEW,
-                                        Uri.parse(item.flag.detailsLink)
+                                        Uri.parse(item.flag.url)
                                     )
                                     startActivity(context, intent, null)
                                     haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
@@ -292,7 +292,7 @@ fun SuggestionsScreen(
                                     haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
                                 },
                                 onResetClick = {
-                                    resetFlagPackage = item.flag.flagPackage
+                                    resetFlagPackage = item.flag.packageName
                                     resetFlagsList.addAll(item.flag.flags)
                                     showResetDialog = true
                                     haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)

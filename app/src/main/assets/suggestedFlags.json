@@ -4,9 +4,9 @@
     "isPrimary": true,
     "warning": "To activate you need to go to the Phone app -> click on the menu in the top right corner -> select \"Options\" -> Call Screen -> Click on \"See how Call Screen works\" and click on the \"Turn on\" button",
     "note": "Activation of the locale will fail if you are not in the selected country, except for the en locale (English)",
-    "title": "Enable Call Screen feature",
-    "flagPackage": "com.google.android.dialer",
-    "appPackage": "com.google.android.dialer",
+    "title": "Call Screen",
+    "packageName": "com.google.android.dialer",
+    "packageId": "com.google.android.dialer",
     "group": "Phone",
     "flags": [
       {
@@ -109,9 +109,9 @@
   },
   {
     "isPrimary": true,
-    "title": "Enable call recording",
-    "flagPackage": "com.google.android.dialer",
-    "appPackage": "com.google.android.dialer",
+    "title": "Call Recording",
+    "packageName": "com.google.android.dialer",
+    "packageId": "com.google.android.dialer",
     "group": "Phone",
     "flags": [
       {
@@ -152,12 +152,12 @@
     ]
   },
   {
-    "title": "Note creation AI tool in Keep",
-    "flagPackage": "com.google.android.keep#com.google.android.keep",
-    "appPackage": "com.google.android.keep",
+    "title": "Note Creation AI Tool",
+    "packageName": "com.google.android.keep#com.google.android.keep",
+    "packageId": "com.google.android.keep",
     "minAppVersionCode": 220569458,
     "group": "Keep",
-    "detailsLink": "https://t.me/gmsflags_content/44",
+    "url": "https://t.me/gmsflags_content/44",
     "flags": [
       {
         "name": "45628843",
@@ -167,12 +167,12 @@
     ]
   },
   {
-    "title": "QuickShare in Google Files FAB",
-    "flagPackage": "com.google.android.apps.nbu.files.device#com.google.android.apps.nbu.files",
-    "appPackage": "com.google.android.apps.nbu.files",
+    "title": "Quick Share Floating Action Button",
+    "packageName": "com.google.android.apps.nbu.files.device#com.google.android.apps.nbu.files",
+    "packageId": "com.google.android.apps.nbu.files",
     "group": "Files",
     "minAppVersionCode": 917695,
-    "detailsLink": "https://t.me/gmsflags_content/45",
+    "url": "https://t.me/gmsflags_content/45",
     "flags": [
       {
         "name": "45640187",
@@ -182,9 +182,9 @@
     ]
   },
   {
-    "title": "Google Tasks pages redesign",
-    "flagPackage": "com.google.android.apps.tasks",
-    "appPackage": "com.google.android.apps.tasks",
+    "title": "New UI for Pages",
+    "packageName": "com.google.android.apps.tasks",
+    "packageId": "com.google.android.apps.tasks",
     "source": "AssembleDebug",
     "minAppVersionCode": 1704481,
     "group": "Tasks",
@@ -202,12 +202,12 @@
     ]
   },
   {
-    "title": "Proofreading mode in GBoard",
+    "title": "Proofread",
     "source": "AssembleDebug",
     "warning": "Works only with en-US locale",
-    "flagPackage": "com.google.android.inputmethod.latin#com.google.android.inputmethod.latin",
-    "appPackage": "com.google.android.inputmethod.latin",
-    "detailsLink": "https://t.me/gmsflags_content/8",
+    "packageName": "com.google.android.inputmethod.latin#com.google.android.inputmethod.latin",
+    "packageId": "com.google.android.inputmethod.latin",
+    "url": "https://t.me/gmsflags_content/8",
     "group": "GBoard",
     "flags": [
       {
@@ -228,13 +228,12 @@
     ]
   },
   {
-    "title": "New search box in Google app",
+    "title": "New Search Box",
     "source": "Danyil Kobzar",
-    "note": "Requires Google app data reset!",
-    "warning": "For correct view - the \"Bottom search bar in Google App\" flag must be disabled",
-    "flagPackage": "com.google.android.libraries.search.googleapp.user#com.google.android.googlequicksearchbox",
-    "appPackage": "com.google.android.googlequicksearchbox",
-    "detailsLink": "https://t.me/gmsflags_content/33",
+    "note": "Requires Google app data reset.",
+    "packageName": "com.google.android.libraries.search.googleapp.user#com.google.android.googlequicksearchbox",
+    "packageId": "com.google.android.googlequicksearchbox",
+    "url": "https://t.me/gmsflags_content/33",
     "group": "Google",
     "flags": [
       {
@@ -255,12 +254,12 @@
     ]
   },
   {
-    "title": "Redesigned Collections tab in Photos",
+    "title": "New Collections Tab",
     "source": "AssembleDebug & Rahul",
-    "flagPackage": "com.google.android.apps.photos",
-    "appPackage": "com.google.android.apps.photos",
+    "packageName": "com.google.android.apps.photos",
+    "packageId": "com.google.android.apps.photos",
     "minAppVersionCode": 48792594,
-    "detailsLink": "https://t.me/gmsflags_content/39",
+    "url": "https://t.me/gmsflags_content/39",
     "group": "Photos",
     "flags": [
       {
@@ -271,11 +270,11 @@
     ]
   },
   {
-    "title": "Date tips while creating task in Tasks",
+    "title": "Date Tips during Task Creation",
     "source": "Nail Sadykov",
-    "flagPackage": "com.google.android.apps.tasks",
-    "appPackage": "com.google.android.apps.tasks",
-    "detailsLink": "https://t.me/gmsflags_content/19",
+    "packageName": "com.google.android.apps.tasks",
+    "packageId": "com.google.android.apps.tasks",
+    "url": "https://t.me/gmsflags_content/19",
     "group": "Tasks",
     "flags": [
       {
@@ -286,12 +285,12 @@
     ]
   },
   {
-    "title": "\"G\" on space in GBoard",
+    "title": "G Icon",
     "source": "RBoard Themes",
     "note": "If you want G not to disappear but to be displayed permanently, change this flag:\nInteger - branding_fadeout_delay_ms (Value: 600)",
-    "flagPackage": "com.google.android.inputmethod.latin#com.google.android.inputmethod.latin",
-    "appPackage": "com.google.android.inputmethod.latin",
-    "detailsLink": "https://t.me/gmsflags_content/16",
+    "packageName": "com.google.android.inputmethod.latin#com.google.android.inputmethod.latin",
+    "packageId": "com.google.android.inputmethod.latin",
+    "url": "https://t.me/gmsflags_content/16",
     "group": "GBoard",
     "flags": [
       {
@@ -307,12 +306,12 @@
     ]
   },
   {
-    "title": "Floating NavBar in Google Photos",
+    "title": "Floating Navigation Bar",
     "source": "Danyil Kobzar",
     "group": "Photos",
-    "flagPackage": "com.google.android.apps.photos",
-    "appPackage": "com.google.android.apps.photos",
-    "detailsLink": "https://t.me/gmsflags_content/12",
+    "packageName": "com.google.android.apps.photos",
+    "packageId": "com.google.android.apps.photos",
+    "url": "https://t.me/gmsflags_content/12",
     "flags": [
       {
         "name": "45415956",
@@ -320,5 +319,311 @@
         "value": "1"
       }
     ]
+  },
+  {
+    "title": "New UI for RCS",
+    "packageName": "com.google.android.apps.messaging.auto#com.google.android.apps.messaging",
+    "packageId": "com.google.android.apps.messaging",
+    "flags": [
+      {
+        "name": "45425786",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45403082",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45462082",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45477604",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45491632",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Danyil Kobzar",
+    "note": "1. New background in chats\n2. Animated reactions\n3. New message input field UI\n4. Noise reduction in voice",
+    "url": "https://t.me/gmsflags_content/23",
+    "isPrimary": true,
+    "group": "Messages"
+  },
+  {
+    "title": "Magic Compose",
+    "packageName": "com.google.android.apps.messaging#com.google.android.apps.messaging",
+    "packageId": "com.google.android.apps.messaging",
+    "flags": [
+      {
+        "name": "bugle_phenotype__always_use_magic_compose_transitions",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "bugle_phenotype__enable_magic_compose_view",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "bugle_phenotype__enable_combined_magic_compose",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "bugle_phenotype__enable_additional_functionalities_for_magic_compose",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "bugle_phenotype__debug_menu_default_available",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "note": "There is a daily limit on the number of requests.",
+    "url": "https://t.me/gmsflags_content/20",
+    "isPrimary": true,
+    "group": "Messages"
+  },
+  {
+    "title": "Reorderable Tasks Lists",
+    "packageName": "com.google.android.apps.tasks",
+    "packageId": "com.google.android.apps.tasks",
+    "flags": [
+      {
+        "name": "ReorderableTaskListSelector__enabled",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Nail Sadykov",
+    "minAppVersionCode": 1623361,
+    "url": "https://t.me/gmsflags_content/32",
+    "isPrimary": false,
+    "group": "Tasks"
+  },
+  {
+    "title": "Month Navigation Chips",
+    "packageName": "com.google.android.calendar",
+    "packageId": "com.google.android.calendar",
+    "flags": [
+      {
+        "name": "MonthNavigationChips__enabled",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Nail Sadykov",
+    "minAppVersionCode": 2017302984,
+    "url": "https://t.me/gmsflags_content/31",
+    "isPrimary": false,
+    "group": "Calendar"
+  },
+  {
+    "title": "Stack Similar Photos",
+    "packageName": "com.google.android.apps.photos",
+    "packageId": "com.google.android.apps.photos",
+    "flags": [
+      {
+        "name": "45412622",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45412900",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45413534",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Hridayan",
+    "url": "https://t.me/gmsflags_content/30",
+    "isPrimary": false,
+    "group": "Photos"
+  },
+  {
+    "title": "Archive Option in Collections > Documents",
+    "packageName": "com.google.android.apps.photos",
+    "packageId": "com.google.android.apps.photos",
+    "flags": [
+      {
+        "name": "45422284",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Hridayan",
+    "url": "https://t.me/gmsflags_content/27",
+    "isPrimary": false,
+    "group": "Photos"
+  },
+  {
+    "title": "Bottom Reply Bar with Unsubscribe Button",
+    "packageName": "gmail_android.device#com.google.android.gm",
+    "packageId": "com.google.android.gm",
+    "flags": [
+      {
+        "name": "45410707",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45417569",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "AssembleDebug",
+    "minAppVersionCode": 64264425,
+    "url": "https://t.me/gappsleaks/395",
+    "isPrimary": false,
+    "group": "Gmail"
+  },
+  {
+    "title": "Material Design 3 Navigation Bar in Password Manager",
+    "packageName": "com.google.android.gms.credential_manager",
+    "packageId": "com.google.android.gms",
+    "flags": [
+      {
+        "name": "Guards__gm3_ui_enabled",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Nail Sadykov",
+    "url": "https://t.me/gmsflags_content/18",
+    "isPrimary": false,
+    "group": "GMS"
+  },
+  {
+    "title": "Scan Text (OCR)",
+    "packageName": "com.google.android.inputmethod.latin#com.google.android.inputmethod.latin",
+    "packageId": "com.google.android.inputmethod.latin",
+    "flags": [
+      {
+        "name": "enable_ocr",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Nail Sadykov",
+    "url": "https://t.me/gmsflags_content/17",
+    "isPrimary": false,
+    "group": "GBoard"
+  },
+  {
+    "title": "Memories Tab",
+    "packageName": "com.google.android.apps.photos",
+    "packageId": "com.google.android.apps.photos",
+    "flags": [
+      {
+        "name": "45386363",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45366356",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45414358",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45411123",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45401668",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45401669",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45411122",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45417430",
+        "type": "bool",
+        "value": "1"
+      },
+      {
+        "name": "45412949",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Danyil Kobzar",
+    "url": "https://t.me/gmsflags_content/13",
+    "isPrimary": false,
+    "group": "Photos"
+  },
+  {
+    "title": "Undo Button",
+    "packageName": "com.google.android.inputmethod.latin#com.google.android.inputmethod.latin",
+    "packageId": "com.google.android.inputmethod.latin",
+    "flags": [
+      {
+        "name": "undo_access_point",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "RBoard Manager",
+    "isPrimary": false,
+    "group": "GBoard"
+  },
+  {
+    "title": "New Bottom Bar",
+    "packageName": "com.google.android.keep#com.google.android.keep",
+    "packageId": "com.google.android.keep",
+    "flags": [
+      {
+        "name": "45618251",
+        "type": "bool",
+        "value": "1"
+      }
+    ],
+    "source": "Danyil Kobzar",
+    "url": "https://t.me/gmsflags_content/43",
+    "isPrimary": false,
+    "group": "Keep"
+  },
+  {
+    "title": "Disable Phixit Schema",
+    "packageName": "com.google.android.gms.phenotype",
+    "packageId": "com.google.android.gms",
+    "flags": [
+      {
+        "name": "Database__enable_phixit_schema_version",
+        "type": "bool",
+        "value": "0"
+      }
+    ],
+    "source": "jqssun",
+    "url": "https://telegra.ph/Temporary-fix-for-GMS-FlagsGoogle-Play-Services-Unsupported-Schema-Error-11-24",
+    "isPrimary": false,
+    "group": "GMS"
   }
 ]

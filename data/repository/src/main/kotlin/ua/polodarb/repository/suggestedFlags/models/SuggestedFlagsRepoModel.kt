@@ -5,8 +5,8 @@ import ua.polodarb.repository.suggestedFlags.models.FlagInfoRepoModel.Companion.
 
 data class SuggestedFlagsRepoModel(
     val title: String,
-    val flagPackage: String,
-    val appPackage: String,
+    val packageName: String,
+    val packageId: String,
     val isBeta: Boolean? = false,
     val isEnabled: Boolean? = true,
     val isPrimary: Boolean? = false,
@@ -16,7 +16,7 @@ data class SuggestedFlagsRepoModel(
     val source: String? = null,
     val note: String? = null,
     val warning: String? = null,
-    val detailsLink: String? = null,
+    val url: String? = null,
     val tag: String? = null,
     val flags: List<FlagInfoRepoModel>
 ) {
@@ -24,18 +24,18 @@ data class SuggestedFlagsRepoModel(
         fun SuggestedFlagsNetModel.toRepoModel() =
             SuggestedFlagsRepoModel(
                 title = title,
-                flagPackage = flagPackage,
+                packageName = packageName,
                 isBeta = isBeta,
                 isEnabled = isEnabled,
                 isPrimary = isPrimary,
                 group = group,
-                appPackage = appPackage,
+                packageId = packageId,
                 minAppVersionCode = minAppVersionCode,
                 minAndroidSdkCode = minAndroidSdkCode,
                 source = source,
                 note = note,
                 warning = warning,
-                detailsLink = detailsLink,
+                url = url,
                 tag = tag,
                 flags = flags.map { it.toRepoModel() }
             )

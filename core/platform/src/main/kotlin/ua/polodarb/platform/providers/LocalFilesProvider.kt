@@ -31,7 +31,7 @@ class LocalFilesProvider(
         return if (file.exists()) {
             file.readText()
         } else {
-            ""
+            getSuggestedFlagsDataFromAssets()
         }
     }
 }

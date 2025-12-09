@@ -18,14 +18,14 @@ class SuggestedFlagsUseCase(
     suspend operator fun invoke(): List<SuggestedFlagsModel>? {
         return try {
             val rawSuggestedFlag = repository.loadSuggestedFlags() ?: emptyList()
-            val overriddenFlags = fetchOverriddenFlags(rawSuggestedFlag.map { it.flagPackage })
+            val overriddenFlags = fetchOverriddenFlags(rawSuggestedFlag.map { it.packageName })
             val data = mutableListOf<SuggestedFlagsModel>()
             val isCurrentAppStable = !BuildConfig.VERSION_NAME.contains("beta", ignoreCase = true)
 
             rawSuggestedFlag.forEach { flag ->
                 val minAndroidSdkCode = flag.minAndroidSdkCode
                 val minVersionCode = flag.minAppVersionCode
-                val appVersionCode = appsRepository.getAppVersionCode(flag.appPackage)
+                val appVersionCode = appsRepository.getAppVersionCode(flag.packageId)
                 val isEnabled = flag.isEnabled ?: true
                 val versionAndroidCheck =
                     minAndroidSdkCode == null || Build.VERSION.SDK_INT >= minAndroidSdkCode
@@ -60,14 +60,14 @@ class SuggestedFlagsUseCase(
 
     private fun isFlagOverridden(flag: SuggestedFlagsRepoModel, overriddenFlags: Map<String, MergedAllTypesOverriddenFlags>): Boolean {
         return flag.flags.firstOrNull {
-            overriddenFlags[flag.flagPackage]?.boolFlag?.get(it.name) != it.value &&
-                    overriddenFlags[flag.flagPackage]?.intFlag?.get(
+            overriddenFlags[flag.packageName]?.boolFlag?.get(it.name) != it.value &&
+                    overriddenFlags[flag.packageName]?.intFlag?.get(
                         it.name
                     ) != it.value &&
-                    overriddenFlags[flag.flagPackage]?.floatFlag?.get(
+                    overriddenFlags[flag.packageName]?.floatFlag?.get(
                         it.name
                     ) != it.value &&
-                    overriddenFlags[flag.flagPackage]?.stringFlag?.get(
+                    overriddenFlags[flag.packageName]?.stringFlag?.get(
                         it.name
                     ) != it.value
         } == null

@@ -4,7 +4,6 @@ import android.content.Context
 import android.telephony.TelephonyManager
 
 class SimCountryIsoUseCase(private val context: Context) {
-
     operator fun invoke(): Result<String> {
         return try {
             val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager

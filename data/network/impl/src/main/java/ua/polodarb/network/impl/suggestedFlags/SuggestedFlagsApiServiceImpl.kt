@@ -13,7 +13,7 @@ import ua.polodarb.network.Resource
 import ua.polodarb.network.setConfig
 import ua.polodarb.network.suggestedFlags.model.SuggestedFlagsNetModel
 
-private const val BASE_URL = "https://raw.githubusercontent.com/polodarb/GMS-Flags/"
+private const val BASE_URL = "https://raw.githubusercontent.com/jqssun/android-gms-phenotype/"
 private const val ASSETS_PATH = "/app/src/main/assets/"
 private const val LOG_TAG = "FlagsApiService"
 
@@ -23,8 +23,7 @@ class SuggestedFlagsApiServiceImpl(
     private val client = HttpClient(engine) {
         this.setConfig(LOG_TAG)
         defaultRequest {
-            url(BASE_URL + "develop" + ASSETS_PATH)
-//            url(BASE_URL + (if (BuildConfig.DEBUG) "develop" else "master") + ASSETS_PATH)
+            url(BASE_URL + "main" + ASSETS_PATH)
         }
     }
 

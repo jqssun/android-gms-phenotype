@@ -35,12 +35,15 @@ class SuggestedFlagsRepositoryImpl(
     override suspend fun loadSuggestedFlags(): List<SuggestedFlagsRepoModel>? {
         return withContext(Dispatchers.IO) {
             try {
+
+                /* TODO: re-enable fetching from GitHub
                 val localFlagsFile = localFilesProvider.getLocalSuggestedFlagsFile()
                 val flags = flagsApiService.getSuggestedFlags()
                 if (flags is Resource.Success && flags.data != null) {
                     val flagsJson = Json.encodeToString(flags.data)
                     localFlagsFile.writeText(flagsJson)
                 }
+                */
 
                 val pkgContent = localFilesProvider.getSuggestedFlagsData()
                 val result = Json.decodeFromString<List<SuggestedFlagsNetModel>>(pkgContent)
