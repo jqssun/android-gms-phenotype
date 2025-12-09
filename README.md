@@ -4,9 +4,6 @@
 ![License](https://img.shields.io/github/license/polodarb/GMS-Flags?style=for-the-badge) 
 [![Telegram](https://img.shields.io/badge/telegram-telegram?style=for-the-badge&logo=telegram&logoColor=white&label=GMS%20Flags&color=%23229ED9)](https://t.me/gmsflags)
 
-![Banner](img/gf_banner.png)
-![Root](img/gf_root.png)
-
 ## Features:
 - **Suggestions screen** - This is a screen that prompts the user to activate some interesting flags. The suggested flags allow the user to read some notes, open the application itself and its settings. It is possible to reset the flag value, see more detailed information or report some problem to the developer.
 - **Apps screen** - This screen generates a list of applications and their associated list of packages with flags within them. This allows you to quickly and conveniently find the appropriate flag.
@@ -27,32 +24,3 @@
 ## Note
 > [!IMPORTANT]
 > It usually takes 1 to 3 force-stops for a flag to be applied. If the flag still does not apply, you should wait 24 hours or reset the application data. 
-
-# Download
-[<img src="gh_download.png"
-     alt="Get it on GitHub"
-     height="80">](https://github.com/polodarb/GMS-Flags/releases/download/1.1.0/gms_flags_1.1.0.apk)
-
-## License
-
-```MIT License
-
-Copyright (c) 2023 Danyil Kobzar
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

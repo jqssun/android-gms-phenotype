@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat.setDecorFitsSystemWindows
-import com.google.firebase.crashlytics.FirebaseCrashlytics
 import ua.polodarb.gmsflags.BuildConfig
 import ua.polodarb.gmsflags.R
 import ua.polodarb.common.Constants
@@ -110,10 +109,8 @@ class ExceptionHandler(
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             }
             context.startActivity(intent)
-            FirebaseCrashlytics.getInstance().recordException(throwable)
             exitProcess(0)
         } catch (e: Exception) {
-            FirebaseCrashlytics.getInstance().recordException(e)
             handler.uncaughtException(thread, throwable)
         }
     }

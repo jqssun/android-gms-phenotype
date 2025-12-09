@@ -17,9 +17,6 @@ import androidx.work.Constraints
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.get
@@ -45,7 +42,6 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : BaseActivity() {
 
-    private lateinit var analytics: FirebaseAnalytics
     private val appContext = get<Context>() as GMSApplication
 
     val rootDBInitializer: InitRootDB by inject()
@@ -61,8 +57,6 @@ class MainActivity : BaseActivity() {
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        analytics = Firebase.analytics
 
         if (!isFirstStart) {
             InitShell.initShell()
